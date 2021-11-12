@@ -1,10 +1,10 @@
 # slock version
-VERSION = 1.4
+VERSION = 1.4-glitchwitch
 
 # Customize below to fit your system
 
 # paths
-PREFIX = /usr/local
+PREFIX = /usr
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
