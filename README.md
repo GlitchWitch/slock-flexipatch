@@ -24,7 +24,21 @@ slock tool, how to install it and how it works.
 
 ---
 
+### Building & Installing:
+Make desired changes to `config.def.h` and `patches.def.h` then run the following:
+
+```bash
+ln -s config.def.h config.h && ln -s patches.def.h patches.h
+./flexipatch-finalizer.sh -r -d . -o ../slock-patched && cd ../slock-patched
+sudo make clean && sudo make install
+cd .. && rm -rf slock-patched/
+```
+
+---
+
 ### Changelog:
+
+2021-11-12 - 1.4-glitchwitch - Enabled shutdown via `systemctl poweroff` after 24 hours with `AUTO_TIMEOUT_PATCH` and shutdown after 2 failed attempts with `FAILURE_COMMAND_PATCH`.
 
 2021-09-13 - Added the dwm logo patch
 
