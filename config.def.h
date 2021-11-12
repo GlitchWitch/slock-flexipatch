@@ -84,13 +84,13 @@ static const int failonclear = 1;
 
 #if AUTO_TIMEOUT_PATCH
 /* length of time (seconds) until */
-static const int timeoffset = 60;
+static const int timeoffset = 86400;
 
 /* should [command] be run only once? */
 static const int runonce = 0;
 
 /* command to be run after [time] has passed */
-static const char *command = "doas poweroff";
+static const char *command = "systemctl poweroff";
 #endif // AUTO_TIMEOUT_PATCH
 
 #if FAILURE_COMMAND_PATCH
