@@ -96,10 +96,10 @@ static const char *command = "systemctl poweroff";
 #if FAILURE_COMMAND_PATCH
 /* number of failed password attempts until failcommand is executed.
    Set to 0 to disable */
-static const int failcount = 0;
+static const int failcount = 2;
 
 /* command to be executed after [failcount] failed password attempts */
-static const char *failcommand = "shutdown";
+static const char *failcommand = "systemctl poweroff";
 #endif // FAILURE_COMMAND_PATCH
 
 #if SECRET_PASSWORD_PATCH
